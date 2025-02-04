@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const url = "mongodb://localhost:27017/secondDb"
+const url = process.env.MONGO_URL;
 
 const dbconnect = () => {
     mongoose.connect(url)
